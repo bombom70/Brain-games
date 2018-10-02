@@ -12,7 +12,5 @@ export const greetingUser = () => {
 };
 
 export const evenGame = () => {
-  const userName = greetingUser();
-
-  evenNumber(userName);
+  evenNumber();
 };

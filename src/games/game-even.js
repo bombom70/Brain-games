@@ -2,10 +2,14 @@ import readlineSync from 'readline-sync';
 
 const isEven = n => n % 2 === 0;
 
-const evenNumber = (userName) => {
+const evenNumber = () => {
   const welcome = `Welcome to Brain Games!\nAnswer "yes" if number even otherwise answer "no".`;
 
+  const userName = readlineSync.question(`May I have your name? `);
+
   console.log(welcome);
+
+  console.log(userName);
 
   const randomNum = Math.floor(Math.random() * 100);
 
