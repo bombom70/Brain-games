@@ -1,8 +1,7 @@
 {
   "name": "nikolai-my-brain-games",
   "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "mini console games",
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
@@ -18,7 +17,6 @@
     "type": "git",
     "url": "git+https://github.com/bombom70/project-lvl1-s352.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bombom70/project-lvl1-s352/issues"
@@ -28,7 +26,11 @@
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/node": "^7.0.0",
-    "@babel/preset-env": "^7.1.0"
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
   },
   "dependencies": {
     "readline-sync": "^1.4.9"
