@@ -1,8 +1,7 @@
 {
   "name": "nikolai-my-brain-games",
   "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "mini console games",
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
@@ -18,7 +17,6 @@
     "type": "git",
     "url": "git+https://github.com/bombom70/project-lvl1-s352.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bombom70/project-lvl1-s352/issues"
