@@ -12,13 +12,7 @@ export const greetingUser = () => {
 };
 
 export const evenGame = () => {
-  console.log('\nWelcome to the Brain Games!\n');
-
-  console.log('Answer "yes" if number even otherwise answer "no".\n');
-
-  const userName = readlineSync.question('May I have your name? ');
-
-  console.log(`Hello, ${userName} !\n`);
+  const userName = greetingUser();
 
   evenNumber(userName);
 };

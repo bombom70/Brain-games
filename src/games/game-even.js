@@ -1,33 +1,32 @@
 import readlineSync from 'readline-sync';
 
-const even = n => n % 2 === 0;
+const isEven = n => n % 2 === 0;
 
-const evenNumber = (user) => {
-  const counterWinner = 3;
-  const iter = (counter) => {
-    if (counter === counterWinner) {
-      console.log(`Congratulations, ${user}!`);
+const evenNumber = (userName) => {
+  const welcome = `Welcome to Brain Games!\nAnswer "yes" if number even otherwise answer "no".`;
+
+  console.log(welcome);
+
+  const randomNum = Math.floor(Math.random() * 100);
+
+  console.log(`Question: ${randomNum}`);
+
+  const yoursAnswer = readlineSync.question(`Your answer: `);
+
+  const goodAnswer = isEven(randomNum) ? 'yes' : 'no';
+
+  const counter = 3;
+
+  for (let i = 0; i < counter; i += 1) {
+    if (yoursAnswer !== goodAnswer) {
+      console.log(`${yoursAnswer} is wrong answer ;(. Correct answer was ${goodAnswer}.\nLet's try again, {userName}!`);
       return;
+    } else {
+      console.log(`Correct!`);
     }
-
-    const randomNumber = Math.ceil(Math.random() * 100);
-
-    console.log(`Question: ${randomNumber}`);
-
-    const winAnswer = even(randomNumber) ? 'yes' : 'no';
-
-    const yoursAnswer = readlineSync.question('Your answer: ');
-
-    if (yoursAnswer !== winAnswer) {
-      console.log(`'${yoursAnswer}' is wrong answer ;(. Correct answer was '${winAnswer}'.\nLet's try again, ${user}!`);
-      return;
-    }
-
-    console.log('Correct!');
-
-    return iter(counter + 1);
-  };
-  return iter(0);
+  }
+  console.log(`Congratulations, ${userName}!`);
+  return;
 };
 
 export default evenNumber;
