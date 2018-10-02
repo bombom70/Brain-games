@@ -1,10 +1,10 @@
-  extends:
-    - 'airbnb-base'
+extends:
+  - 'airbnb-base'
 
-  env:
-    node: true
+parser: babel-eslint
 
-  rules:
-    no-console: 0
+env:
+  node: true
 
-  parser: babel-eslint
+rules:
+  no-console: 0
