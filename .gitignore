@@ -1,3 +1,7 @@
 node_modules
 dist
+<<<<<<< HEAD
 *.log
+=======
+*.log
+>>>>>>> 5050b1a070f05f592d72e7c420048397c0225a18
