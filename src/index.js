@@ -20,5 +20,5 @@ export const evenGame = () => {
 
   console.log(`Hello, ${userName} !\n`);
 
-  evenNumber();
+  evenNumber(userName);
 };
