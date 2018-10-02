@@ -10,7 +10,7 @@ const evenNumber = (user) => {
       return;
     }
 
-    const randomNumber = Math.ceil(Math.random() * 20);
+    const randomNumber = Math.ceil(Math.random() * 100);
 
     console.log(`Question: ${randomNumber}`);
 
@@ -19,7 +19,7 @@ const evenNumber = (user) => {
     const yoursAnswer = readlineSync.question('Your answer: ');
 
     if (yoursAnswer !== winAnswer) {
-      console.log(`${yoursAnswer} is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${user}!`);
+      console.log(`'${yoursAnswer}' is wrong answer ;(. Correct answer was '${winAnswer}'.\nLet's try again, ${user}!`);
       return;
     }
 
