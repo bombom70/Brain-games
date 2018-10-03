@@ -9,3 +9,9 @@
 > sudo npm -g i nikolai-my-brain-games
 
 [![asciicast](https://asciinema.org/a/OIUHb6gG1xQGaEIp9asiSlrtP.png)](https://asciinema.org/a/OIUHb6gG1xQGaEIp9asiSlrtP)
+
+
+# Start game #
+> brain-calc
+
+[![asciicast](https://asciinema.org/a/6lhAbXxX8rqoaYOWkgtFIttfx.png)](https://asciinema.org/a/6lhAbXxX8rqoaYOWkgtFIttfx)
