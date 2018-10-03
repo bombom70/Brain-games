@@ -5,6 +5,7 @@
 
 [![Build Status](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
 
-#Install package:# sudo npm -g i nikolai-my-brain-games
+# Install package: # 
+> sudo npm -g i nikolai-my-brain-games
 
 [![asciicast](https://asciinema.org/a/OIUHb6gG1xQGaEIp9asiSlrtP.png)](https://asciinema.org/a/OIUHb6gG1xQGaEIp9asiSlrtP)
