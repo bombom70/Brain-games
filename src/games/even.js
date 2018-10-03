@@ -4,7 +4,8 @@ const isEven = n => n % 2 === 0;
 
 const evenNumber = (name) => {
   const iter = (counter) => {
-    if (counter === 3) {
+    const step = 3;
+    if (counter === step) {
       console.log(`Congratulations, ${name}!`);
       return;
     }
@@ -12,12 +13,12 @@ const evenNumber = (name) => {
 
     console.log(`Question: ${randomNum}`);
 
-    const yoursAnswer = readlineSync.question('Your answer: ');
+    const answer = readlineSync.question('Your answer: ');
 
-    const goodAnswer = isEven(randomNum) ? 'yes' : 'no';
+    const rightAnswer = isEven(randomNum) ? 'yes' : 'no';
 
-    if (yoursAnswer !== goodAnswer) {
-      console.log(`${yoursAnswer} is wrong answer ;(. Correct answer was ${goodAnswer}.\nLet's try again, {name}!`);
+    if (answer !== rightAnswer) {
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${rightAnswer}.\nLet's try again, {name}!`);
       return;
     }
     console.log('Correct!');
