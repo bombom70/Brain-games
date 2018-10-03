@@ -1,7 +1,9 @@
 # project-lvl1-s352
-<a href="https://codeclimate.com/github/bombom70/project-lvl1-s352/maintainability"><img src="https://api.codeclimate.com/v1/badges/c13431a6fcf8128a54b3/maintainability" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-<a href="https://codeclimate.com/github/bombom70/project-lvl1-s352/test_coverage"><img src="https://api.codeclimate.com/v1/badges/c13431a6fcf8128a54b3/test_coverage" /></a>
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
+
+[![Build Status](https://travis-ci.org/bombom70/project-lvl1-s352.svg?branch=master)](https://travis-ci.org/bombom70/project-lvl1-s352)
 
 [![Build Status](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
 
@@ -9,3 +11,9 @@
 > sudo npm -g i nikolai-my-brain-games
 
 [![asciicast](https://asciinema.org/a/OIUHb6gG1xQGaEIp9asiSlrtP.png)](https://asciinema.org/a/OIUHb6gG1xQGaEIp9asiSlrtP)
+
+
+# Start game #
+> brain-calc
+
+[![asciicast](https://asciinema.org/a/6lhAbXxX8rqoaYOWkgtFIttfx.png)](https://asciinema.org/a/6lhAbXxX8rqoaYOWkgtFIttfx)
