@@ -1,6 +1,6 @@
 {
   "name": "nikolai-my-brain-games",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "mini console games",
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
