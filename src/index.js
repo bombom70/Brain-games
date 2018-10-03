@@ -12,7 +12,7 @@ export const greetingUser = () => {
 
 const isEven = n => n % 2 === 0;
 
-const evenNumber = (userName) => {
+const evenNumber = (name) => {
   const randomNum = Math.floor(Math.random() * 100);
 
   console.log(`Question: ${randomNum}`);
@@ -25,18 +25,18 @@ const evenNumber = (userName) => {
 
   for (let i = 0; i < counter; i += 1) {
     if (yoursAnswer !== goodAnswer) {
-      console.log(`${yoursAnswer} is wrong answer ;(. Correct answer was ${goodAnswer}.\nLet's try again, {userName}!`);
+      console.log(`${yoursAnswer} is wrong answer ;(. Correct answer was ${goodAnswer}.\nLet's try again, {name}!`);
       return;
     } else {
       console.log(`Correct!`);
     }
   }
-  console.log(`Congratulations, ${userName}!`);
+  console.log(`Congratulations, ${name}!`);
   return;
 };
 
 export const evenGame = () => {
-  const userName = greetingUser();
+  const playerName = greetingUser();
   
-  evenNumber(userName);
+  evenNumber(playerName);
 };
