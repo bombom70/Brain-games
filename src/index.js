@@ -1,7 +1,11 @@
 import readlineSync from 'readline-sync';
 
+const welcome = () => console.log('\nWelcome to the Brain Games!\n');
+
 export const greetingUser = () => {
-  console.log('\nWelcome to the Brain Games!\n');
+  welcome();
+
+  console.log(`Answer "yes" if number even otherwise answer "no".`);
 
   const userName = readlineSync.question('May I have your name? ');
 
