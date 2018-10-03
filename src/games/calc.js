@@ -16,7 +16,12 @@ const sign = () => {
   return randSign;
 };
 
-const calcNum = (name, counter) => {
+const calcNum = (name) => {
+  const iter = (counter) => {
+    if (counter === 3) {
+      console.log(`Congratulations, ${name}!`);
+      return;
+    }
     const num1 = Math.floor(Math.random() * 30);
 
     const num2 = Math.floor(Math.random() * 30);
@@ -37,15 +42,14 @@ const calcNum = (name, counter) => {
 
     const yoursAnswer = readlineSync.question('Your answer: ');
 
-    for (let i = 0; i < counter; i += 1) {
-    	if (yoursAnswer === result) {
-    		console.log('Correct!');
-    	} else {
-    		console.log(`${yoursAnswer} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, {name}!`);
-    		return;
-    	}
+    if (yoursAnswer != result) {
+      console.log(`${yoursAnswer} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, {name}!`);
+      return;
     }
-    console.log('Congratulations, ${name}!');
+    console.log('Correct!');
+    iter(counter + 1);
+  };
+  iter(0);
 };
 
 export default calcNum;
