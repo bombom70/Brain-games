@@ -9,13 +9,13 @@ const evenNumber = (name) => {
       console.log(`Congratulations, ${name}!`);
       return;
     }
-    const randomNum = Math.floor(Math.random() * 100);
+    const question = Math.floor(Math.random() * 100);
 
-    console.log(`Question: ${randomNum}`);
+    console.log(`Question: ${question}`);
 
     const answer = readlineSync.question('Your answer: ');
 
-    const rightAnswer = isEven(randomNum) ? 'yes' : 'no';
+    const rightAnswer = isEven(question) ? 'yes' : 'no';
 
     if (answer !== rightAnswer) {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${rightAnswer}.\nLet's try again, {name}!`);
