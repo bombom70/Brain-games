@@ -43,4 +43,8 @@ const evenNumber = () => {
   return;
 };
 
-export default evenNumber;
+export const evenGame = () => {
+  const userName = greetingUser();
+  
+  evenNumber(userName);
+};
