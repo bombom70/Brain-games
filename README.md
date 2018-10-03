@@ -7,4 +7,4 @@
 
 Install package: sudo npm -g i nikolai-my-brain-games
 
-<script src="https://asciinema.org/a/OIUHb6gG1xQGaEIp9asiSlrtP.js" id="asciicast-OIUHb6gG1xQGaEIp9asiSlrtP" async></script>
+[![asciicast](https://asciinema.org/a/OIUHb6gG1xQGaEIp9asiSlrtP.png)](https://asciinema.org/a/OIUHb6gG1xQGaEIp9asiSlrtP)
