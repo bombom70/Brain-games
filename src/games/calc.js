@@ -47,12 +47,12 @@ const calcNum = (name) => {
         result = num1 * num2;
     }
 
-    const yoursAnswer = readlineSync.question('Your answer: ');
+    const answer = readlineSync.question('Your answer: ');
 
-    const rightAnswer = (result - yoursAnswer) === 0;
+    const rightAnswer = (result - answer) === 0;
 
     if (rightAnswer === false) {
-      console.log(`${yoursAnswer} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, {name}!`);
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${result}.\nLet''s try again, ${name}!`);
       return;
     }
     console.log('Correct!');

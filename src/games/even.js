@@ -18,7 +18,7 @@ const evenNumber = (name) => {
     const rightAnswer = isEven(question) ? 'yes' : 'no';
 
     if (answer !== rightAnswer) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${rightAnswer}.\nLet's try again, {name}!`);
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${rightAnswer}.\nLet's try again, ${name}!`);
       return;
     }
     console.log('Correct!');
