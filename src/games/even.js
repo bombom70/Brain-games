@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
+import greetingUser from '..';
 
 const isEven = n => n % 2 === 0;
 
 const evenNumber = (name) => {
-  const iter = (counter) => {
-    const step = 3;
+  const iter = (counter, step) => {
     if (counter === step) {
       console.log(`Congratulations, ${name}!`);
       return;
@@ -22,9 +22,17 @@ const evenNumber = (name) => {
       return;
     }
     console.log('Correct!');
-    iter(counter + 1);
+    iter(counter + 1, 3);
   };
-  iter(0);
+  iter(0, 3);
 };
 
-export default evenNumber;
+const evenGame = () => {
+  const playerName = greetingUser();
+
+  console.log('Answer "yes" if number even otherwise answer "no".\n');
+
+  evenNumber(playerName);
+};
+
+export default evenGame;

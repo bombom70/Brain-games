@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import greetingUser from '..';
 
 const sign = () => {
   const randomSign = Math.floor(Math.random() * 3) + 1;
@@ -52,4 +53,12 @@ const calcNum = (name) => {
   iter(0);
 };
 
-export default calcNum;
+const calcGame = () => {
+  const playerName = greetingUser();
+
+  console.log('What is the result of the expression?');
+
+  calcNum(playerName);
+};
+
+export default calcGame;
