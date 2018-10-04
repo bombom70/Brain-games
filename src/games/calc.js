@@ -6,20 +6,23 @@ const sign = () => {
 
   let randSign;
 
-  if (randomSign === 1) {
-    randSign = '+';
-  } else if (randomSign === 2) {
-    randSign = '-';
-  } else {
-    randSign = '*';
+  switch (randomSign) {
+    case (1):
+      randSign = '+';
+      break;
+    case (2):
+      randSign = '-';
+      break;
+    default:
+      randSign = '*';
   }
 
   return randSign;
 };
 
 const calcNum = (name) => {
-  const iter = (counter) => {
-    if (counter === 3) {
+  const iter = (step) => {
+    if (step === 3) {
       console.log(`Congratulations, ${name}!`);
       return;
     }
@@ -33,22 +36,27 @@ const calcNum = (name) => {
 
     console.log(`Question: ${num1} ${randomSign} ${num2}`);
 
-    if (randomSign === '+') {
-      result = num1 + num2;
-    } else if (randomSign === '-') {
-      result = num1 - num2;
-    } if (randomSign === '*') {
-      result = num1 * num2;
+    switch (randomSign) {
+      case '+':
+        result = num1 + num2;
+        break;
+      case '-':
+        result = num1 - num2;
+        break;
+      default:
+        result = num1 * num2;
     }
 
     const yoursAnswer = readlineSync.question('Your answer: ');
 
-    if (yoursAnswer != result) {
+    const rightAnswer = (result - yoursAnswer) === 0;
+
+    if (rightAnswer === false) {
       console.log(`${yoursAnswer} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, {name}!`);
       return;
     }
     console.log('Correct!');
-    iter(counter + 1);
+    iter(step + 1);
   };
   iter(0);
 };
