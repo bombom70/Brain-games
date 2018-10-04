@@ -20,3 +20,8 @@
 > braint-gcd
 
 [![asciicast](https://asciinema.org/a/g4BAAuRf8HmoglXlKvapU2DcD.png)](https://asciinema.org/a/g4BAAuRf8HmoglXlKvapU2DcD)
+
+# Start progression game #
+> braint-progression
+
+[![asciicast](https://asciinema.org/a/Qqrax4OTRuWAOcsLKCBlgSgV1.png)](https://asciinema.org/a/Qqrax4OTRuWAOcsLKCBlgSgV1)
