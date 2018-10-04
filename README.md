@@ -11,7 +11,12 @@
 [![asciicast](https://asciinema.org/a/OIUHb6gG1xQGaEIp9asiSlrtP.png)](https://asciinema.org/a/OIUHb6gG1xQGaEIp9asiSlrtP)
 
 
-# Start game #
+# Start Calc game #
 > brain-calc
 
 [![asciicast](https://asciinema.org/a/6lhAbXxX8rqoaYOWkgtFIttfx.png)](https://asciinema.org/a/6lhAbXxX8rqoaYOWkgtFIttfx)
+
+# Start NOD game #
+> braint-gcd
+
+[![asciicast](https://asciinema.org/a/g4BAAuRf8HmoglXlKvapU2DcD.png)](https://asciinema.org/a/g4BAAuRf8HmoglXlKvapU2DcD)
