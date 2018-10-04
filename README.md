@@ -5,8 +5,6 @@
 
 [![Build Status](https://travis-ci.org/bombom70/project-lvl1-s352.svg?branch=master)](https://travis-ci.org/bombom70/project-lvl1-s352)
 
-[![Build Status](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
-
 # Install package: # 
 > sudo npm -g i nikolai-my-brain-games
 
