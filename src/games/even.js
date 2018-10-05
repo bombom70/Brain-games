@@ -1,38 +1,18 @@
-import readlineSync from 'readline-sync';
-import greetingUser from '..';
+import startGame from '..';
+import { cons } from 'hexlet-pairs';
 
 const isEven = n => n % 2 === 0;
 
-const evenNumber = (name) => {
-  const iter = (counter, step) => {
-    if (counter === step) {
-      console.log(`Congratulations, ${name}!`);
-      return;
-    }
-    const question = Math.floor(Math.random() * 100);
+const evenNumber = () => {
+  const number = Math.ceil(Math.random() * 50);
 
-    console.log(`Question: ${question}`);
+  const answer = isEven(number) ? 'yes' : 'no';
 
-    const answer = readlineSync.question('Your answer: ');
-
-    const rightAnswer = isEven(question) ? 'yes' : 'no';
-
-    if (answer !== rightAnswer) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${rightAnswer}.\nLet's try again, ${name}!`);
-      return;
-    }
-    console.log('Correct!');
-    iter(counter + 1, 3);
-  };
-  iter(0, 3);
+  return cons(number, answer);
 };
 
 const evenGame = () => {
-  const playerName = greetingUser();
-
-  console.log('Answer "yes" if number even otherwise answer "no".\n');
-
-  evenNumber(playerName);
+  startGame(evenNumber, 'Answer "yes" if number even otherwise answer "no".');
 };
 
 export default evenGame;

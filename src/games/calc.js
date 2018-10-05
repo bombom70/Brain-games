@@ -1,5 +1,5 @@
-import readlineSync from 'readline-sync';
-import greetingUser from '..';
+import startGame from '..';
+import { cons } from 'hexlet-pairs';
 
 const sign = () => {
   const randomSign = Math.floor(Math.random() * 3) + 1;
@@ -20,53 +20,25 @@ const sign = () => {
   return randSign;
 };
 
-const calcNum = (name) => {
-  const iter = (step) => {
-    if (step === 3) {
-      console.log(`Congratulations, ${name}!`);
-      return;
-    }
-    const num1 = Math.floor(Math.random() * 30);
+const calcNum = () => {
+  const num1 = Math.floor(Math.random() * 30);
 
-    const num2 = Math.floor(Math.random() * 30);
+  const num2 = Math.floor(Math.random() * 30);
 
-    const randomSign = sign();
+  const randomSign = sign();
 
-    let result;
-
-    console.log(`Question: ${num1} ${randomSign} ${num2}`);
-
-    switch (randomSign) {
-      case '+':
-        result = num1 + num2;
-        break;
-      case '-':
-        result = num1 - num2;
-        break;
-      default:
-        result = num1 * num2;
-    }
-
-    const answer = readlineSync.question('Your answer: ');
-
-    const rightAnswer = (result - answer) === 0;
-
-    if (rightAnswer === false) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${result}.\nLet''s try again, ${name}!`);
-      return;
-    }
-    console.log('Correct!');
-    iter(step + 1);
-  };
-  iter(0);
+  switch (randomSign) {
+    case '+':
+      return cons(`${num1} + ${num2}`, `${num1 + num2}`);
+    case '-':
+      return cons(`${num1} - ${num2}`, `${num1 - num2}`);
+    default:
+      return cons(`${num1} * ${num2}`, `${num1 * num2}`);
+  }
 };
 
 const calcGame = () => {
-  const playerName = greetingUser();
-
-  console.log('What is the result of the expression?');
-
-  calcNum(playerName);
+  startGame(calcNum, 'What is the result of the expression?');
 };
 
 export default calcGame;
