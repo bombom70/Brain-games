@@ -1,24 +1,7 @@
 import startGame from '..';
 import { cons } from 'hexlet-pairs';
 
-const sign = () => {
-  const randomSign = Math.floor(Math.random() * 3) + 1;
-
-  let randSign;
-
-  switch (randomSign) {
-    case (1):
-      randSign = '+';
-      break;
-    case (2):
-      randSign = '-';
-      break;
-    default:
-      randSign = '*';
-  }
-
-  return randSign;
-};
+const sign = () => Math.floor(Math.random() * 3) + 1;
 
 const calcNum = () => {
   const num1 = Math.floor(Math.random() * 30);
@@ -28,17 +11,13 @@ const calcNum = () => {
   const randomSign = sign();
 
   switch (randomSign) {
-    case '+':
+    case 1:
       return cons(`${num1} + ${num2}`, `${num1 + num2}`);
-    case '-':
+    case 2:
       return cons(`${num1} - ${num2}`, `${num1 - num2}`);
     default:
       return cons(`${num1} * ${num2}`, `${num1 * num2}`);
   }
 };
 
-const calcGame = () => {
-  startGame(calcNum, 'What is the result of the expression?');
-};
-
-export default calcGame;
+export default () => startGame(calcNum, 'What is the result of the expression?');

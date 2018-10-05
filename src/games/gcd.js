@@ -22,19 +22,19 @@ const nodTwoNum = (num1, num2) => {
 };
 
 const gcdNum = () => {
-  const num1 = Math.floor(Math.random() * 30);
+  const num1 = Math.floor(Math.random() * 30) + 1;
 
-  const num2 = Math.floor(Math.random() * 30);
+  const num2 = Math.floor(Math.random() * 30) + 1;
+
+  if (num1 === 0 || num2 === 0) {
+    return 0;
+  }
 
   const question = `${num1} ${num2}`;
 
-  const result = nodTwoNum(num1, num2);
+  const answer = nodTwoNum(num1, num2);
 
-  return cons(question, result);
+  return cons(question, answer);
 };
 
-const gcdGame = () => {
-  startGame(gcdNum, 'Find the greatest common divisor of given numbers.');
-};
-
-export default gcdGame;
+export default () => startGame(gcdNum, 'Find the greatest common divisor of given numbers.');

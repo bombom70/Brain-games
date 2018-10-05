@@ -1,44 +1,37 @@
 import startGame from '..';
 import { cons } from 'hexlet-pairs';
 
+const lengthProgression = 10;
+
+const upValue = 2;
+
+const value = 44;
+
 const buildProgression = () => {
   const progression = [];
+  let conter = value;
 
-  const iter = (value, step) => {
-    const index = Math.floor(step / 2);
+  for (let i = 0; i < lengthProgression; i += 1) {
+    progression.push(conter);
+    conter += upValue;
 
-    const up = 2;
-
-    if (progression.length === step) {
-      return progression;
+    if (progression.length === Math.ceil(lengthProgression / 2)) {
+      progression[i] = '..';
     }
-    switch (progression.length === index) {
-      case true:
-        progression[index] = '..';
-        break;
-      default:
-        progression.push(value);
-    }
-
-    return iter(value + up, step);
-  };
-  return iter((Math.floor(Math.random() * 50)), 10);
+  }
+  return progression;
 };
 
 const numIsShadow = () => {
-  const progressionArr = buildProgression();
+  const progressionArr = buildProgression(lengthProgression, value, upValue);
 
   const question = progressionArr.join(' ');
 
-  const up = 2;
+  const index = Math.ceil(lengthProgression / 2);
 
-  const answer = progressionArr[4] + up;
+  const answer = progressionArr[index] - 2;
 
   return cons(question, answer);
 };
 
-const progressionGame = () => {
-  startGame(numIsShadow, 'Find the greatest common divisor of given numbers.');
-};
-
-export default progressionGame;
+export default () => startGame(numIsShadow, 'Find the greatest common divisor of given numbers.');
