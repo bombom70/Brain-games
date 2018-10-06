@@ -26,4 +26,4 @@ const generateProgression = () => {
   return cons(question, `${answer}`);
 };
 
-export default () => startGame(generateProgression, 'Find the greatest common divisor of given numbers.');
+export default () => startGame(generateProgression, 'What number is missing in this progression?');
