@@ -1,16 +1,15 @@
 import startGame from '..';
 import { cons } from 'hexlet-pairs';
+import randomNumber from '../utils';
 
-const sign = () => Math.floor(Math.random() * 3) + 1;
+const choiceSign = () => Math.floor(Math.random() * 3) + 1;
 
 const calcNum = () => {
-  const num1 = Math.floor(Math.random() * 30);
+  const num1 = randomNumber(1, 30);
 
-  const num2 = Math.floor(Math.random() * 30);
+  const num2 = randomNumber(1, 30);
 
-  const randomSign = sign();
-
-  switch (randomSign) {
+  switch (choiceSign) {
     case 1:
       return cons(`${num1} + ${num2}`, `${num1 + num2}`);
     case 2:

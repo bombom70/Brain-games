@@ -1,37 +1,29 @@
 import startGame from '..';
 import { cons } from 'hexlet-pairs';
+import randomNumber from '../utils';
 
-const lengthProgression = 10;
+const generateProgression = () => {
+  const step = randomNumber(1, 10);
 
-const upValue = 2;
+  const numberHiddenElement = randomNumber(1, 9);
 
-const value = 44;
+  const startElement = randomNumber(1, 20);
 
-const buildProgression = () => {
-  const progression = [];
-  let conter = value;
+  const progressionLenght = 10;
 
-  for (let i = 0; i < lengthProgression; i += 1) {
-    progression.push(conter);
-    conter += upValue;
+  const answer = step * numberHiddenElement + startElement;
 
-    if (progression.length === Math.ceil(lengthProgression / 2)) {
-      progression[i] = '..';
+  const iter = (count, acc) => {
+    if (count === 0) {
+      return acc;
     }
-  }
-  return progression;
+    if (count === numberHiddenElement) {
+      return iter(count - 1, `.. ${acc}`);
+    }
+    return iter(count - 1, `${count * step + startElement} ${acc}`);
+  };
+  const question = iter(progressionLenght, '');
+  return cons(question, `${answer}`);
 };
 
-const numIsShadow = () => {
-  const progressionArr = buildProgression(lengthProgression, value, upValue);
-
-  const question = progressionArr.join(' ');
-
-  const index = Math.ceil(lengthProgression / 2);
-
-  const answer = progressionArr[index] - 2;
-
-  return cons(question, answer);
-};
-
-export default () => startGame(numIsShadow, 'Find the greatest common divisor of given numbers.');
+export default () => startGame(generateProgression, 'Find the greatest common divisor of given numbers.');

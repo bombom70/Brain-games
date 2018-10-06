@@ -22,9 +22,7 @@ const startGame = (getGameData, mission) => {
 
     const answer = readlineSync.question('Your answer: ');
 
-    const win = (Math.max(answer, userAnswer) - Math.min(answer, userAnswer)) === 0;
-
-    if ((userAnswer === answer) || (win === true)) {
+    if (answer === userAnswer) {
       console.log('Correct!');
     } else {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${userAnswer}.\nLet's try again, ${name}!`);

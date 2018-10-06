@@ -1,10 +1,11 @@
 import startGame from '..';
 import { cons } from 'hexlet-pairs';
+import randomNumber from '../utils';
 
 const isEven = n => n % 2 === 0;
 
 const evenNumber = () => {
-  const question = Math.ceil(Math.random() * 50);
+  const question = randomNumber(1, 50);
 
   const answer = isEven(question) ? 'yes' : 'no';
 

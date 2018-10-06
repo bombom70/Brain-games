@@ -1,7 +1,9 @@
 import startGame from '..';
 import { cons } from 'hexlet-pairs';
+import randomNumber from '../utils';
 
-const nodTwoNum = (num1, num2) => {
+// ф-я для нахождения наибольшего общего делителя(НОД) 2 чисел
+const nodForTwoNumbers = (num1, num2) => {
   const maxNum = Math.max(num1, num2);
 
   const minNum = Math.min(num1, num2);
@@ -21,20 +23,16 @@ const nodTwoNum = (num1, num2) => {
   return result;
 };
 
-const gcdNum = () => {
-  const num1 = Math.floor(Math.random() * 30) + 1;
+const nodGame = () => {
+  const num1 = randomNumber(1, 100);
 
-  const num2 = Math.floor(Math.random() * 30) + 1;
-
-  if (num1 === 0 || num2 === 0) {
-    return 0;
-  }
+  const num2 = randomNumber(1, 100);
 
   const question = `${num1} ${num2}`;
 
-  const answer = nodTwoNum(num1, num2);
+  const answer = nodForTwoNumbers(num1, num2);
 
-  return cons(question, answer);
+  return cons(`${question}`, `${answer}`);
 };
 
-export default () => startGame(gcdNum, 'Find the greatest common divisor of given numbers.');
+export default () => startGame(nodGame, 'Find the greatest common divisor of given numbers.');
