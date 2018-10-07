@@ -4,6 +4,8 @@ import randomNumber from '../utils';
 
 const choiceSign = () => Math.floor(Math.random() * 3) + 1;
 
+const description = 'What is the result of the expression?';
+
 const calcNum = () => {
   const num1 = randomNumber(1, 30);
 
@@ -19,4 +21,4 @@ const calcNum = () => {
   }
 };
 
-export default () => startGame(calcNum, 'What is the result of the expression?');
+export default () => startGame(calcNum, description);

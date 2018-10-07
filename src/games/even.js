@@ -4,6 +4,8 @@ import randomNumber from '../utils';
 
 const isEven = n => n % 2 === 0;
 
+const description = 'Answer "yes" if number even otherwise answer "no".';
+
 const evenNumber = () => {
   const question = randomNumber(1, 50);
 
@@ -12,4 +14,4 @@ const evenNumber = () => {
   return cons(question, answer);
 };
 
-export default () => startGame(evenNumber, 'Answer "yes" if number even otherwise answer "no".');
+export default () => startGame(evenNumber, description);
