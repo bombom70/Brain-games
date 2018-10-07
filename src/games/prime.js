@@ -16,7 +16,7 @@ const isPrime = (number) => {
   return true;
 };
 
-const generetaData = () => {
+const generateData = () => {
   const question = randomNumber(2, 100);
 
   const answer = isPrime(question) ? 'yes' : 'no';
