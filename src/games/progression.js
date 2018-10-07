@@ -6,7 +6,7 @@ const description = 'What number is missing in this progression?';
 
 const progressionLenght = 10;
 
-const generateProgression = (progressionLenght, step, numberHiddenElement, startElement) => {
+const generateProgression = (length, step, numberHiddenElement, startElement) => {
   const iter = (count, acc) => {
     if (count === 0) {
       return acc;
