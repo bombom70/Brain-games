@@ -25,3 +25,8 @@
 > braint-progression
 
 [![asciicast](https://asciinema.org/a/Qqrax4OTRuWAOcsLKCBlgSgV1.png)](https://asciinema.org/a/Qqrax4OTRuWAOcsLKCBlgSgV1)
+
+# Start prime game #
+> braint-prime
+
+[![asciicast](https://asciinema.org/a/441Vq18djn3JPxgdj3QUK7dHs.png)](https://asciinema.org/a/441Vq18djn3JPxgdj3QUK7dHs)
