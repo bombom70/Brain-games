@@ -17,16 +17,16 @@
 [![asciicast](https://asciinema.org/a/6lhAbXxX8rqoaYOWkgtFIttfx.png)](https://asciinema.org/a/6lhAbXxX8rqoaYOWkgtFIttfx)
 
 # Start NOD game #
-> braint-gcd
+> brain-gcd
 
 [![asciicast](https://asciinema.org/a/g4BAAuRf8HmoglXlKvapU2DcD.png)](https://asciinema.org/a/g4BAAuRf8HmoglXlKvapU2DcD)
 
 # Start progression game #
-> braint-progression
+> brain-progression
 
 [![asciicast](https://asciinema.org/a/Qqrax4OTRuWAOcsLKCBlgSgV1.png)](https://asciinema.org/a/Qqrax4OTRuWAOcsLKCBlgSgV1)
 
 # Start prime game #
-> braint-prime
+> brain-prime
 
 [![asciicast](https://asciinema.org/a/441Vq18djn3JPxgdj3QUK7dHs.png)](https://asciinema.org/a/441Vq18djn3JPxgdj3QUK7dHs)
