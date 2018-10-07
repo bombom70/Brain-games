@@ -24,4 +24,4 @@ const generateData = () => {
   return cons(question, answer);
 };
 
-export default () => startGame(generetaData, description);
+export default () => startGame(generateData, description);
